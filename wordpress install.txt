@@ -1,0 +1,21 @@
+					Wordpress install:
+
+1. make a folder in xampp/htdocs/folder and paste a new wordpress folder
+2. start xampp and run local host
+3. make a database
+4. install wordpress and run database by username: root
+				         password:
+5. make a username and password for wordpress login.
+
+			
+				THEME INSTALL:
+
+1. paste theme into wp-content/theme
+2. now install theme.
+3. now import demo data(appearance/install demo data)
+
+
+					PLUGIN:
+
+1. Paste plugin into wp-content/plugins
+2. install them

@@ -1,0 +1,142 @@
+ 						LARAVEL
+
+
+	1. C:\wamp64\www\laravel\database\migrations	//create tables/migrations
+	2. C:\wamp64\www\laravel\app\Http\Controllers	//controller
+	3. .env   // database name
+	4. C:\wamp64\www\laravel\routes			//Routing
+	5. C:\wamp64\www\laravel\resources\views	// pages(home.blade.php)	
+
+
+
+
+
+
+------------------------------------------------GIT_BASH-----------------------------------------
+
+
+
+	git base command: php artisan serve
+	
+	controller: php artisan make:Controller NameController
+
+	php artisan migrate
+
+
+
+
+
+	1. create a table=>     		  php artisan make:migration create_users_table --create=users
+
+	2. migrate/join with phpmyadmin =>        php artisan migrate
+
+	3. delete pervious table=>       	php artisan migrate:rollback
+
+
+	4.command will roll back all of your application's migrations=> 	php artisan migrate:reset
+
+
+
+	5.The "migrate:refresh" command will roll back all of your migrations  		
+	and then execute the migrate command.This command effectively 			php artisan migrate:refresh
+	re-creates your entire database:
+
+		
+
+	// Refresh the database and run all database seeds...
+										php artisan migrate:refresh --seed
+
+
+	6.The command will drop all tables from the database		php artisan migrate:fresh
+										
+
+	7.To rename an existing database table			Schema::rename($from, $to);
+	
+
+	8. $ php artisan make:migration update_sportcar_table --table=cars
+		add fileds in sport car
+		php artisan migrate
+
+
+
+-------------------------------------------------------TINKER_COMMANDS-------------------------------------------------------------
+
+
+
+		1. php artisan tinker   	// create tinker
+
+		2. check echo"hello"
+
+		3. DB::table('T_Name')->insert(['Field'=>'value','Field'=>'value','Field'=>'value']);		//table creat
+		
+		shows true for success full creation of table
+
+		4. DB:table('T_name')-> get()			//Show_Data
+
+		5.DB:table('T_name')->where('name','salary')-> first()
+
+		6.DB:table('T_name')->select('name','salary')-> get()
+
+		7.DB:table('T_name')-> pluck('name');
+
+		8.DB:table('T_name')-> orderby('id','desc')->get()
+
+		9.DB:table('T_name')-> count()
+	
+		10.DB:table('T_name')-> max('id')
+
+		11.DB:table('T_name')-> avg('salary')
+
+
+--------------------------------------------------------CURD-----------------------------------------------------------------------
+
+
+	
+	 STEPS-:
+
+		1. php artisan serve
+
+		2.php artisan make:Controller NameController
+	
+		3.make methods like
+
+			public function insert(){
+
+			$data=DB::table('cars')->insert(['model'=>'SAFARI'])->get();
+			return view("pagename",compact(data));
+				}
+		
+		4.REdiect TO DATABASE 
+			use DB;    // in controller
+
+		5. make ROUTE
+
+			ROUTE::get("URL_NAME","Controller_name@Method_name");
+
+
+		6. Make view
+
+			make a page (like show.blade.php)
+
+		
+
+	CREATE_COMMAND:-	$data=DB::table('cars')->insert(['model'=>'SAFARI'])->get();		
+
+	
+	SHOW_COMMAND:-		
+    				$data = DB::table('cars')->get();
+    				print_r($data);
+
+    			$data = DB::table('cars')->orderby('id','desc')->get();
+    			print_r($data);
+
+    			return view('query.showdata',compact('data'));	
+    		
+	UPDATE_COMMAND:-	 $data=DB::table('cars')->where (['id'=>1])->update(['model'=>'shivraj dhakad']);
+					print_r($data);
+
+	DELETE_COMMAND:-	$data=DB::table('cars')->where (['id'=>1])->delete(['model'=>'shivraj dhakad'])->get();
+
+   
+
+	

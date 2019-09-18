@@ -1,0 +1,25 @@
+							
+
+							GIT_HUB
+
+
+
+	1.$ git config --global user.email "reso.raj4922@gmail.com"
+
+	2.$ git config --global user.name "shiv4922"
+
+	3.$ git init		 //Initialised repository
+
+	4.$ git status		//check status
+
+	5.$ git add -A		// add files
+
+	6.4.$ git status	//check status
+
+	7.$ git commit -m "first commit"	// commit and add message
+
+	8.$ git remote add origin https://github.com/shiv4922/bootstrap.git	// copy from github 
+
+	9.$ git push -u origin master 		// upload to github
+
+

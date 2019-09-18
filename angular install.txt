@@ -1,0 +1,23 @@
+					
+						How to install:-
+
+1. download node.js
+2. download git bash and visual studio coke
+3. run some commands on Git Bash:-
+	a. node -v =: check node.js version
+	b. npm -v =: none package manager 
+	c. npm install -g typescript =: installation of typscript
+	d. tsc -v =: check typescript version
+	e. npm install -g @angular/cli =: installation of angular
+	f. ng -v =: check agular
+
+4. fuctions on Visual Studio Coke:-
+
+	a. install vscode-icons(8.8.0)
+	b. install View in browser(0.0.5)
+	c. install Live server(5.6.1)
+
+5. Open Angular folder in VS
+	
+	a. open terminal
+	b. ng serve -o =: sever connection

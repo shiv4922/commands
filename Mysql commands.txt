@@ -1,0 +1,82 @@
+
+
+********************************************************  *MYSQL DATABASE ***********************************************************************
+
+
+
+
+				C:\xampp\mysql\bin>mysql.exe -h  localhost -u root -p  			// connection command
+					Enter password:
+
+
+
+********************************************* INSERT / SELECT******************************************************************
+
+
+
+		MariaDB [testdb]> create database college;  	// creat database
+		
+
+	MariaDB [testdb]> use college;				// use database
+	Database changed
+
+MariaDB [college]> create table student(sid int,sname varchar(50),branch varchar(20),marks varchar(50));	// table create
+ 
+
+MariaDB [college]> insert into student values(1,'shiv','IT','98');
+
+
+MariaDB [college]> insert into student values(1,'raj','IT','98');			//value insert
+
+
+MariaDB [college]> insert into student values(2,'shivraj','CSE','68');
+
+
+MariaDB [college]> insert into student values(3,'shraj','CSE','38');
+
+
+MariaDB [college]> select * from student;  		// show the table data
++------+---------+--------+-------+
+| sid  | sname   | branch | marks |
++------+---------+--------+-------+
+|    1 | shiv    | IT     | 98    |
+|    1 | raj     | IT     | 98    |
+|    2 | shivraj | CSE    | 68    |
+|    3 | shraj   | CSE    | 38    |
++------+---------+--------+-------+
+
+MariaDB [college]> select sname from student;  // SHOW PERTICULAR COLOUMB
++---------+
+| sname   |
++---------+
+| shiv    |
+| raj     |
+| shivraj |
+| shraj   |
++---------+
+
+MariaDB [college]> select distinct branch from student;  		// removes duplicate coloumbs /rows
+MariaDB [college]> select distinct branch, sid  from student;
+
+
+select * from faculty where department='IT';      // Where condition .
+
+MariaDB [college]> select * from student where  sid IN (1,3);  // work as or operator
++------+-------+--------+-------+
+| sid  | sname | branch | marks |
++------+-------+--------+-------+
+|    1 | shiv  | IT     | 98    |
+|    1 | raj   | IT     | 98    |
+|    3 | shraj | CSE    | 38    |
++------+-------+--------+-------+
+
+MariaDB [college]> select * from student where  sid NOT IN (1,3);		// opposite of IN
++------+---------+--------+-------+
+| sid  | sname   | branch | marks |
++------+---------+--------+-------+
+|    2 | shivraj | CSE    | 68    |
++------+---------+--------+-------+
+
+******************************************************
+
+MariaDB [college]>
