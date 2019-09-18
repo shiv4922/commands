@@ -22,4 +22,11 @@
 
 	9.$ git push -u origin master 		// upload to github
 
+	10.UPDATE DATA AND LOAD TO GIT HUB
+
+		$ git add -A
+		$ git commit -m "New Message"
+		$ git push -u origin master
+		$ git status
+------------------------------------------------------------------
 
