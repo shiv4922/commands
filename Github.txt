@@ -14,7 +14,7 @@
 
 	5.$ git add -A		// add files
 
-	6.4.$ git status	//check status
+	6.4.$ git status	//checking status 
 
 	7.$ git commit -m "first commit"	// commit and add message
 
